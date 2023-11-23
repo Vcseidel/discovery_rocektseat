@@ -7,7 +7,7 @@
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color: rgba(255, 255, 255, 0.50);
+  --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --links-color-hover: rgba(255, 255, 255, 0.2);
@@ -17,7 +17,7 @@
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.50);
+  --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --links-color-hover: rgba(0, 0, 0, 0.1);
@@ -60,15 +60,13 @@ body * {
 /*switch*/
 
 #switch {
-
   position: relative;
   width: 64px;
 
   margin: 4px auto;
-
 }
 
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--icon-switch) no-repeat center;
@@ -87,7 +85,7 @@ body * {
   left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -112,7 +110,6 @@ ul {
 }
 
 ul li a {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +119,7 @@ ul li a {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-  
+
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -130,29 +127,23 @@ ul li a {
   font-weight: 500;
 
   transition: background 0.2s;
-
 }
 
 ul li a:hover {
-
   background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);  
-
+  border: 1.5px solid var(--text-color);
 }
 
 /*social links*/
 
 #social_links {
-
   display: flex;
   justify-content: center;
 
   padding: 24px 0;
   font-size: 24px;
-
 }
 #social_links a {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,14 +151,10 @@ ul li a:hover {
 
   transition: background 0.2s;
   border-radius: 50%;
-
 }
 
-
-#social_links a:hover{
-
+#social_links a:hover {
   background: var(--links-color-hover);
- 
 }
 
 /*footer*/
@@ -178,3 +165,13 @@ footer {
   font-size: 14px;
 }
 
+/* media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
